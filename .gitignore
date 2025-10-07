@@ -1,0 +1,46 @@
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# Node
+node_modules/
+
+# .NET
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userprefs
+*.psess
+*.vsp
+_ReSharper*/
+*.ncrunch*
+*.VisualState.xml
+TestResult*/
+*.Publish.xml
+
+# Flutter / Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+build/
+pubspec.lock
+
+# Logs / temporales
+*.log
+log/
+logs/
+
+# Secretos comunes
+.env
+*.pfx
+*.p12
+*.cer
+*.key
+secrets.json
+appsettings.*.Development.json
