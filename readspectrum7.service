@@ -1,0 +1,16 @@
+[Unit]
+Description=ReadSpectrum7 ETL (.NET 8)
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/rspectrum7
+ExecStart=/usr/bin/dotnet /opt/rspectrum7/rspectrum7.dll
+# Ejemplos de argumentos: "-1" para ayer, o "01/08/2025 05/08/2025"
+# ExecStart=/usr/bin/dotnet /opt/rspectrum7/rspectrum7.dll -1
+Environment=RS7_ConnectionStrings__Oracle=User Id=spectrum;Password=spectrum;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.2.13)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl.cndc.bo)));
+Restart=on-failure
+User=rs7
+Group=rs7
+
+[Install]
+WantedBy=multi-user.target

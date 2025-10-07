@@ -1,0 +1,15 @@
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app --no-restore
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/runtime:8.0
+WORKDIR /app
+COPY --from=build /app .
+# NLog writes here
+VOLUME ["/app/logs"]
+# Default args: run sin parámetros = hoy
+ENTRYPOINT ["dotnet", "rspectrum7.dll"]

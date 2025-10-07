@@ -1,0 +1,3 @@
+2025-09-03 12:03:25.3470|INFO|rspectrum7.Bootstrap|Inicio de ejecución .NET 8 (Linux-ready) 
+2025-09-03 12:03:25.3763|WARN|rspectrum7.Bootstrap|No se proporcionaron parámetros de fecha. Se usa la fecha actual. 
+2025-09-03 12:03:25.8070|INFO|ReadSpectrum7.DataRawObjectId|Se cargaron 2648 entradas en el diccionario DataRawObjectId. 

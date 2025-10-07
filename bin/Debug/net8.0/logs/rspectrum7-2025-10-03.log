@@ -1,0 +1,94 @@
+2025-10-03 14:39:44.7865|INFO|rspectrum7.Bootstrap|Inicio de ejecución .NET 8 (Linux-ready) 
+2025-10-03 14:39:44.8617|WARN|rspectrum7.Bootstrap|No se proporcionaron parámetros de fecha. Se usa la fecha actual. 
+2025-10-03 14:39:45.6248|INFO|ReadSpectrum7.DataRawObjectId|Se cargaron 2648 entradas en el diccionario DataRawObjectId. 
+2025-10-03 14:39:45.6248|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM_TD30 
+2025-10-03 14:39:45.6248|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM__V30 
+2025-10-03 14:39:45.6350|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TAP__1MM 
+2025-10-03 14:39:45.6350|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM_GE30 
+2025-10-03 14:39:45.6350|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM__H30 
+2025-10-03 14:39:45.6350|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_TD30_SP7 | fullLog: True | Hora: 14:39:45 
+2025-10-03 14:39:45.6350|INFO|rspectrum7.Bootstrap|Iniciando procesamiento: 2025-10-03 | Hora: 14:39:45 
+2025-10-03 14:39:45.8027|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8027|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR01_025 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8064|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR01_025 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8064|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR02_025 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8064|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR02_025 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8064|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=WARNES 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.8064|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=WARNES 
+2025-10-03 14:39:45.8064|INFO|rspectrum7.Bootstrap|	Fin ReadFile 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.FilesDown|Iniciando carga de 1554 registros para TDM_TD30_SP7 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.FilesDown|INICIANDO CARGA EN BD 
+2025-10-03 14:39:45.8064|INFO|ReadSpectrum7.RecordBulkInserter|Iniciando carga de registros masiva... 
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9731|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:39:45.9879|INFO|ReadSpectrum7.RecordBulkInserter|Se generaron 89784 filas para insertar en TDM_TD30_BULK 
+2025-10-03 14:39:46.6472|INFO|ReadSpectrum7.RecordBulkInserter|Bloque 1/2 insertado con 50000 filas 
+2025-10-03 14:39:47.0337|INFO|ReadSpectrum7.RecordBulkInserter|Bloque 2/2 insertado con 39784 filas 
+2025-10-03 14:39:47.0337|INFO|ReadSpectrum7.RecordBulkInserter|Carga completada en 1.22 segundos 
+2025-10-03 14:39:47.0337|INFO|ReadSpectrum7.FilesDown|FIN CARGA EN BD 
+2025-10-03 14:40:38.7383|INFO|rspectrum7.Bootstrap|	Fin LoadToDb 
+2025-10-03 14:40:38.7897|WARN|rspectrum7.Bootstrap|Valores diferentes para fecha 03/10/2025 - DB: 94458.16 | File: 95915.31 
+2025-10-03 14:40:38.7897|INFO|rspectrum7.Bootstrap|Fin de Proceso: TDM_TD30_SP7 | Hora: 14:40:38 
+2025-10-03 14:40:38.7995|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_V30_SP7 | fullLog: False | Hora: 14:40:38 
+2025-10-03 14:40:38.9439|INFO|ReadSpectrum7.FilesDown|Se cargaron 2864806.6999999997 registros 
+2025-10-03 14:40:38.9807|INFO|rspectrum7.Bootstrap|Fin de Proceso: TDM_V30_SP7 | Hora: 14:40:38 
+2025-10-03 14:40:38.9807|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TAP__1MM_SP7 | fullLog: False | Hora: 14:40:38 
+2025-10-03 14:40:39.0265|INFO|ReadSpectrum7.FilesDown|Se cargaron 39264.1 registros 
+2025-10-03 14:40:39.0395|INFO|rspectrum7.Bootstrap|Fin de Proceso: TAP__1MM_SP7 | Hora: 14:40:39 
+2025-10-03 14:40:39.0395|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_GE30_SP7 | fullLog: False | Hora: 14:40:39 
+2025-10-03 14:42:41.6429|INFO|rspectrum7.Bootstrap|Inicio de ejecución .NET 8 (Linux-ready) 
+2025-10-03 14:42:41.6820|WARN|rspectrum7.Bootstrap|No se proporcionaron parámetros de fecha. Se usa la fecha actual. 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.DataRawObjectId|Se cargaron 2648 entradas en el diccionario DataRawObjectId. 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM_TD30 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM__V30 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TAP__1MM 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM_GE30 
+2025-10-03 14:42:42.1249|INFO|ReadSpectrum7.FilesDown|Server PATH:\\192.168.2.120\Spectrum_Data\TDM__H30 
+2025-10-03 14:42:42.1249|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_TD30_SP7 | fullLog: True | Hora: 14:42:42 
+2025-10-03 14:42:42.1428|INFO|rspectrum7.Bootstrap|Iniciando procesamiento: 2025-10-03 | Hora: 14:42:42 
+2025-10-03 14:42:42.2632|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR01_025 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR01_025 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR02_025 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=TR02_025 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=WARNES 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.2656|WARN|ReadSpectrum7.Record|ID no encontrado para combinación: b1=WARNES2, b2=115, b3=WARNES 
+2025-10-03 14:42:42.2656|INFO|rspectrum7.Bootstrap|	Fin ReadFile 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.FilesDown|Iniciando carga de 1554 registros para TDM_TD30_SP7 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.FilesDown|INICIANDO CARGA EN BD 
+2025-10-03 14:42:42.2656|INFO|ReadSpectrum7.RecordBulkInserter|Iniciando carga de registros masiva... 
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4062|INFO|ReadSpectrum7.DataRawObjectId|{0} 	{1} 	 {2} 	{3} 	{4} 	 {5} 	{6}  
+2025-10-03 14:42:42.4237|INFO|ReadSpectrum7.RecordBulkInserter|Se generaron 89784 filas para insertar en TDM_TD30_BULK 
+2025-10-03 14:42:43.0159|INFO|ReadSpectrum7.RecordBulkInserter|Bloque 1/2 insertado con 50000 filas 
+2025-10-03 14:42:43.3784|INFO|ReadSpectrum7.RecordBulkInserter|Bloque 2/2 insertado con 39784 filas 
+2025-10-03 14:42:43.3784|INFO|ReadSpectrum7.RecordBulkInserter|Carga completada en 1.10 segundos 
+2025-10-03 14:42:43.3784|INFO|ReadSpectrum7.FilesDown|FIN CARGA EN BD 
+2025-10-03 14:43:35.9490|INFO|rspectrum7.Bootstrap|	Fin LoadToDb 
+2025-10-03 14:43:35.9942|WARN|rspectrum7.Bootstrap|Valores diferentes para fecha 03/10/2025 - DB: 94458.16 | File: 95915.31 
+2025-10-03 14:43:35.9942|INFO|rspectrum7.Bootstrap|Fin de Proceso: TDM_TD30_SP7 | Hora: 14:43:35 
+2025-10-03 14:43:36.0056|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_V30_SP7 | fullLog: False | Hora: 14:43:36 
+2025-10-03 14:43:36.1107|INFO|ReadSpectrum7.FilesDown|Se cargaron 2864806.6999999997 registros 
+2025-10-03 14:43:36.1457|INFO|rspectrum7.Bootstrap|Fin de Proceso: TDM_V30_SP7 | Hora: 14:43:36 
+2025-10-03 14:43:36.1457|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TAP__1MM_SP7 | fullLog: False | Hora: 14:43:36 
+2025-10-03 14:43:36.1754|INFO|ReadSpectrum7.FilesDown|Se cargaron 39264.1 registros 
+2025-10-03 14:43:36.1867|INFO|rspectrum7.Bootstrap|Fin de Proceso: TAP__1MM_SP7 | Hora: 14:43:36 
+2025-10-03 14:43:36.1867|INFO|rspectrum7.Bootstrap|Inicio de Proceso: TDM_GE30_SP7 | fullLog: False | Hora: 14:43:36 

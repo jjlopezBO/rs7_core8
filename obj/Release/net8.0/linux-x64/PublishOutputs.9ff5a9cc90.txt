@@ -1,0 +1,4 @@
+E:\JLA\Proyectos\rs7_core8\publish\rspectrum7.pdb
+E:\JLA\Proyectos\rs7_core8\publish\appsettings.json
+E:\JLA\Proyectos\rs7_core8\publish\NLog.config
+E:\JLA\Proyectos\rs7_core8\publish\rspectrum7
