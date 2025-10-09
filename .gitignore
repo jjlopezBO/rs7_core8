@@ -1,46 +1,108 @@
-# Sistema / IDE
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.code-workspace
+# =========================================
+# GitIgnore para proyectos .NET / C#
+# Compatible con Visual Studio, VS Code y Linux
+# =========================================
 
-# Node
+# Carpetas temporales y de compilación
+bin/
+obj/
+out/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Configuraciones locales de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales de Visual Studio Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Archivos generados por compilación
+*.dll
+*.exe
+*.app
+*.appx
+*.log
+*.cache
+*.pdb
+*.mdb
+*.ilk
+*.obj
+*.tmp
+*.svclog
+*.vshost.*
+
+# Archivos de configuración sensibles
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.secret.json
+
+# Archivos de publicación o despliegue
+*.publishsettings
+*.pubxml
+*.pubxml.user
+publish/
+dist/
+deploy/
+
+# Archivos de respaldo y sistema operativo
+*.bak
+*.swp
+*.swo
+*.tmp
+*.orig
+*.old
+*.log
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Archivos generados por herramientas de análisis o IDEs
+.idea/
+*.iml
+*.sln.ide
+*.userprefs
+
+# Archivos de paquetes y dependencias
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
 node_modules/
 
-# .NET
-**/bin/
-**/obj/
-*.user
-*.suo
-*.userprefs
-*.psess
-*.vsp
-_ReSharper*/
-*.ncrunch*
-*.VisualState.xml
-TestResult*/
-*.Publish.xml
+# Archivos de test y cobertura
+TestResults/
+*.coverage
+*.coveragexml
+coverage/
+*.trx
+*.testresults
 
-# Flutter / Dart
-.dart_tool/
-.packages
-.flutter-plugins
-.flutter-plugins-dependencies
-.melos_tool/
-build/
-pubspec.lock
+# Archivos temporales de Docker
+docker-compose.override.yml
+*.env.local
+.env.local
+.env.*.local
 
-# Logs / temporales
-*.log
-log/
-logs/
+# Archivos temporales de Linux
+*.pid
+*.seed
+*.pid.lock
 
-# Secretos comunes
-.env
-*.pfx
-*.p12
-*.cer
-*.key
-secrets.json
-appsettings.*.Development.json
+# =========================================
+# Fin del archivo .gitignore
+# =========================================
