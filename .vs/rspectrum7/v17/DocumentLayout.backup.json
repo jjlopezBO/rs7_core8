@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:filesdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -56,14 +56,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAALIAAAAAQmZmZmb+v8QAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T17:56:47.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "rspectrum7.csproj",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\rspectrum7.csproj",
               "RelativeDocumentMoniker": "rspectrum7.csproj",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NLog.config",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\NLog.config",
               "RelativeDocumentMoniker": "NLog.config",
@@ -93,13 +93,13 @@
               "RelativeDocumentMoniker": "FilesDown.cs",
               "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\FilesDown.cs",
               "RelativeToolTip": "FilesDown.cs",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAIwBUBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAg/////z8jwOcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T14:18:16.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -111,13 +111,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Oracle.cs",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\Oracle.cs",
               "RelativeDocumentMoniker": "Oracle.cs",
               "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\Oracle.cs",
               "RelativeToolTip": "Oracle.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAMjMzM1MwwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T17:56:48.122Z"
             },

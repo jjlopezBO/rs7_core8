@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "E:\\JLA\\Proyectos\\rs7_core8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\carga.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:carga.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\filesdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:filesdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -23,47 +31,59 @@
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:oracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\readspectrum7.service||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:readspectrum7.service||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|e:\\jla\\proyectos\\rs7_core8\\carga.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{C91B5A98-2F98-6CB5-5D29-5FB9FF85D914}|rspectrum7.csproj|solutionrelative:carga.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 283,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "carga.sql ",
+              "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\carga.sql",
+              "RelativeDocumentMoniker": "carga.sql",
+              "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\carga.sql",
+              "RelativeToolTip": "carga.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-08T19:54:07.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEBAACAZmZmZmYYwBsBAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:56:47.749Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T17:56:47.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "rspectrum7.csproj",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\rspectrum7.csproj",
               "RelativeDocumentMoniker": "rspectrum7.csproj",
@@ -75,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NLog.config",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\NLog.config",
               "RelativeDocumentMoniker": "NLog.config",
@@ -87,20 +107,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FilesDown.cs",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\FilesDown.cs",
               "RelativeDocumentMoniker": "FilesDown.cs",
               "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\FilesDown.cs",
               "RelativeToolTip": "FilesDown.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAswG0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAg/////z8jwOcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T14:18:16.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T14:18:16.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -112,19 +131,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Oracle.cs",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\Oracle.cs",
               "RelativeDocumentMoniker": "Oracle.cs",
               "ToolTip": "E:\\JLA\\Proyectos\\rs7_core8\\Oracle.cs",
               "RelativeToolTip": "Oracle.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAMjMzM1MwwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T17:56:48.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Dockerfile",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -136,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "readspectrum7.service",
               "DocumentMoniker": "E:\\JLA\\Proyectos\\rs7_core8\\readspectrum7.service",
               "RelativeDocumentMoniker": "readspectrum7.service",
@@ -145,6 +164,24 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-08-26T16:10:22.384Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 117,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

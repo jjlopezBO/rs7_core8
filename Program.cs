@@ -1,14 +1,18 @@
-using System;
-using System.Globalization;
-using System.IO;
 using Microsoft.Extensions.Configuration;
 using NLog;
 using Oracle.ManagedDataAccess.Client;
 using ReadSpectrum7;
+using System;
+using System.Data;
+using System.Globalization;
+using System.IO;
 
 class Bootstrap
 {
     private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
+    // Mantener abierto hasta el final para conservar el candado
+    private static FileStream? _appLock;
 
     static int Main(string[] args)
     {
@@ -16,9 +20,9 @@ class Bootstrap
         CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-BO");
         CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-BO");
 
-        // Inicializar NLog desde archivo (si no existe, no rompe)
         try
         {
+            // --- Inicializar NLog ---
             var nlogPath = Path.Combine(AppContext.BaseDirectory, "NLog.config");
             if (File.Exists(nlogPath))
                 LogManager.Setup().LoadConfigurationFromFile(nlogPath);
@@ -29,7 +33,50 @@ class Bootstrap
                     builder.ForLogger().WriteToConsole();
                 });
 
-            // Carga de configuración (appsettings.json + variables de entorno)
+            // ====== SINGLETON LOCK (archivo) ======
+            string lockPath = "/run/rspectrum7/lock"; // con systemd: RuntimeDirectory=rspectrum7
+            try
+            {
+                var dir = Path.GetDirectoryName(lockPath)!;
+                Directory.CreateDirectory(dir);
+
+                // Exclusión mutuamente excluyente a nivel SO
+                _appLock = new FileStream(lockPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+
+                if (_appLock.Length == 0)
+                {
+                    _appLock.WriteByte(0);
+                    _appLock.Flush(true);
+                }
+
+                logger.Info("Lock adquirido en {0}. Continuando ejecución.", lockPath);
+            }
+            catch (IOException)
+            {
+                logger.Warn("Otra instancia está en ejecución (lock en {0}). Saliendo.", lockPath);
+                return 99; // ocupado
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                // Fallback si no hay permisos en /run (ejecución manual)
+                logger.Warn(ex, "Sin permisos en {0}. Intentando fallback a /tmp/rspectrum7.lock", lockPath);
+                lockPath = "/tmp/rspectrum7.lock";
+                try
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(lockPath)!);
+                    _appLock = new FileStream(lockPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+                    if (_appLock.Length == 0) { _appLock.WriteByte(0); _appLock.Flush(true); }
+                    logger.Info("Lock adquirido en {0}.", lockPath);
+                }
+                catch (Exception ex2)
+                {
+                    logger.Error(ex2, "No se pudo adquirir ningún lock. Saliendo.");
+                    return 99;
+                }
+            }
+            // ====== FIN SINGLETON LOCK ======
+
+            // --- Carga de configuración (appsettings.json + variables de entorno) ---
             var config = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -38,7 +85,7 @@ class Bootstrap
 
             logger.Info("Inicio de ejecución .NET 8 (Linux-ready)");
 
-            // Fechas por argumentos (comportamiento original)
+            // --- Parseo de parámetros: días atrás ---
             if (!TryParseArgs(args, out DateTime fechaInicio, out DateTime fechaFin))
                 return 2;
 
@@ -48,8 +95,6 @@ class Bootstrap
                 logger.Error("No se encontró la cadena de conexión. Configure ConnectionStrings:Oracle en appsettings.json o variable 'RS7_ConnectionStrings__Oracle'.");
                 return 3;
             }
-            /*fechaInicio =DateTime.Now.Date.AddDays(-1);
-            fechaFin = fechaInicio;*/
 
             using (OracleConnection cn = new OracleConnection(connString))
             {
@@ -77,7 +122,10 @@ class Bootstrap
                                 logger.Error(exFd, "Error en el procesamiento del archivo {0}", fd.FileType);
                             }
                         }
-                        fecha= fecha.AddDays(1);
+
+                        logger.Info("Cargando Oracle: Fecha: {0:dd/MM/yyyy} | Hora: {1:HH:mm:ss}", fecha, DateTime.Now);
+                        CargarOracle(fecha, cn);
+                        logger.Info("Fin Oracle: Fecha: {0:dd/MM/yyyy} | Hora: {1:HH:mm:ss}", fecha, DateTime.Now);
                     }
                 }
                 catch (Exception exMain)
@@ -92,59 +140,93 @@ class Bootstrap
         }
         catch (Exception bootEx)
         {
-            // Si algo falla incluso antes de tener logger listo
             try { logger.Fatal(bootEx, "Fallo en bootstrap."); } catch { /* ignorar */ }
             return 1;
         }
         finally
         {
+            // Liberar lock
+            try { _appLock?.Dispose(); } catch { /* ignore */ }
+
             // Importante en consola/servicio para vaciar buffers de archivo
             LogManager.Shutdown();
         }
     }
 
-    // ... (tus métodos TryParseArgs y ProcessDay sin cambios)
-    // (Déjalos tal como los pegaste)
-    private static bool TryParseArgs(string[] args, out DateTime fecha, out DateTime fecha2)
+    /// <summary>
+    /// Parámetros:
+    ///  - Sin args  -> hoy
+    ///  - 1 arg N   -> solo N días atrás (0=hoy, 1=ayer)
+    ///  - 2 args A B-> rango desde A días atrás hasta B días atrás (inclusive). Orden autoajustable.
+    /// </summary>
+    private static bool TryParseArgs(string[] args, out DateTime fechaInicio, out DateTime fechaFin)
     {
-        fecha = DateTime.Today;
-        fecha2 = DateTime.Today;
+        fechaInicio = DateTime.Today;
+        fechaFin = DateTime.Today;
 
-        if (args.Length == 1 && args[0] == "-1")
+        try
         {
-            fecha = DateTime.Now.Date.AddDays(-1);
-            fecha2 = DateTime.Now.Date.AddDays(-1);
-            return true;
-        }
-
-        if (args.Length == 2)
-        {
-            try
+            if (args.Length == 0)
             {
-                CultureInfo culture = new CultureInfo("es-BO");
-                fecha = DateTime.Parse(args[0], culture);
-                fecha2 = DateTime.Parse(args[1], culture);
+                LogManager.GetCurrentClassLogger().Info("Sin parámetros: se procesará la fecha de hoy ({0:dd/MM/yyyy})", fechaInicio);
                 return true;
             }
-            catch (Exception ex)
-            {
-                var logger = LogManager.GetCurrentClassLogger();
-                logger.Error(ex, "Formato incorrecto. Use: dd/MM/yyyy. Ej: 01/06/2025");
-                return false;
-            }
-        }
 
-        var l = LogManager.GetCurrentClassLogger();
-        l.Warn("No se proporcionaron parámetros de fecha. Se usa la fecha actual.");
-        return true;
+            if (args.Length == 1)
+            {
+                if (int.TryParse(args[0], out int diasAtras))
+                {
+                    fechaInicio = DateTime.Today.AddDays(-diasAtras);
+                    fechaFin = fechaInicio;
+                    LogManager.GetCurrentClassLogger().Info("Procesando un solo día: {0:dd/MM/yyyy}", fechaInicio);
+                    return true;
+                }
+                else
+                {
+                    LogManager.GetCurrentClassLogger().Error("Parámetro inválido: {0}. Debe ser un número entero (ej. 0, 1, 3).", args[0]);
+                    return false;
+                }
+            }
+
+            if (args.Length == 2)
+            {
+                if (int.TryParse(args[0], out int desde) && int.TryParse(args[1], out int hasta))
+                {
+                    fechaInicio = DateTime.Today.AddDays(-desde);
+                    fechaFin = DateTime.Today.AddDays(-hasta);
+
+                    if (fechaFin < fechaInicio)
+                        (fechaInicio, fechaFin) = (fechaFin, fechaInicio);
+
+                    LogManager.GetCurrentClassLogger().Info("Procesando rango de fechas: {0:dd/MM/yyyy} a {1:dd/MM/yyyy}", fechaInicio, fechaFin);
+                    return true;
+                }
+                else
+                {
+                    LogManager.GetCurrentClassLogger().Error("Parámetros inválidos: {0} {1}. Ambos deben ser números enteros.", args[0], args[1]);
+                    return false;
+                }
+            }
+
+            LogManager.GetCurrentClassLogger().Error("Cantidad de parámetros incorrecta. Use:");
+            LogManager.GetCurrentClassLogger().Error("  rspectrum7                → procesa hoy");
+            LogManager.GetCurrentClassLogger().Error("  rspectrum7 1              → procesa ayer");
+            LogManager.GetCurrentClassLogger().Error("  rspectrum7 3 1            → procesa desde hace 3 días hasta ayer");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            LogManager.GetCurrentClassLogger().Error(ex, "Error al interpretar los parámetros.");
+            return false;
+        }
     }
 
     private static void ProcessDay(FilesDown fd, DateTime fecha, OracleConnection cn, bool fullLog = false)
     {
         if (fullLog)
         {
-            var logger = LogManager.GetCurrentClassLogger();
-            logger.Info("Iniciando procesamiento: {0:yyyy-MM-dd} | Hora: {1:HH:mm:ss}", fecha, DateTime.Now);
+            var l = LogManager.GetCurrentClassLogger();
+            l.Info("Iniciando procesamiento: {0:yyyy-MM-dd} | Hora: {1:HH:mm:ss}", fecha, DateTime.Now);
         }
 
         double fileValue = fd.ReadFile(fecha);
@@ -165,10 +247,38 @@ class Bootstrap
 
         if (Math.Round(fileValue, 2) != Math.Round(dbValue, 2))
         {
-            LogManager.GetCurrentClassLogger().Warn("Valores diferentes para fecha {0:dd/MM/yyyy} - DB: {1} | File: {2}",
+            LogManager.GetCurrentClassLogger().Warn(
+                "Valores diferentes para fecha {0:dd/MM/yyyy} - DB: {1} | File: {2}",
                 fecha,
                 dbValue.ToString("F2").Replace(",", "."),
-                fileValue.ToString("F2").Replace(",", "."));
+                fileValue.ToString("F2").Replace(",", ".")
+            );
+        }
+    }
+
+    public static bool CargarOracle(DateTime fecha, OracleConnection cn)
+    {
+        try
+        {
+            using (var cmd = cn.CreateCommand())
+            {
+                cmd.BindByName = true;
+                cmd.CommandText = "cargadatos_appmovl"; // añade el esquema si aplica: SCHEMA.cargadatos_appmovl
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandTimeout = 0; // si puede tardar mucho
+
+                cmd.Parameters.Add("fecha", OracleDbType.Date).Value = fecha.Date;
+
+                cmd.ExecuteNonQuery();
+                logger.Info("Carga Oracle sin errores.");
+                return true;
+            }
+        }
+        catch (OracleException ex)
+        {
+            logger.Error(ex, "Error al ejecutar cargadatos_appmovl");
+            return false;
         }
     }
 }
+x\

@@ -224,3 +224,4 @@ E:\JLA\Proyectos\rs7_core8\obj\Release\net8.0\linux-x64\rspectrum7.pdb
 E:\JLA\Proyectos\rs7_core8\obj\Release\net8.0\linux-x64\rspectrum7.genruntimeconfig.cache
 E:\JLA\Proyectos\rs7_core8\obj\Release\net8.0\linux-x64\ref\rspectrum7.dll
 E:\JLA\Proyectos\rs7_core8\bin\Release\net8.0\linux-x64\NLog.config
+E:\JLA\Proyectos\rs7_core8\obj\Release\net8.0\linux-x64\rspectrum7.sourcelink.json

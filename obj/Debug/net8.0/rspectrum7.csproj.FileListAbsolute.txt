@@ -57,3 +57,4 @@ E:\JLA\Proyectos\rs7_core8\obj\Debug\net8.0\rspectrum7.genruntimeconfig.cache
 E:\JLA\Proyectos\rs7_core8\obj\Debug\net8.0\ref\rspectrum7.dll
 E:\JLA\Proyectos\rs7_core8\bin\Debug\net8.0\appsettings.json
 E:\JLA\Proyectos\rs7_core8\bin\Debug\net8.0\NLog.config
+E:\JLA\Proyectos\rs7_core8\obj\Debug\net8.0\rspectrum7.sourcelink.json

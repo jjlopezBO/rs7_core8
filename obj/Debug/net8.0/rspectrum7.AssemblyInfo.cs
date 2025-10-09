@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rspectrum7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fd9382a5defab577409fce7280a637044490d0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("rspectrum7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rspectrum7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
